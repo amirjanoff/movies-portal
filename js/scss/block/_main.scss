@@ -1,139 +1,123 @@
 *,
 ::before,
 ::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 body {
   font-family: Abel, sans-serif;
   background: #dedede;
 }
-
 .container {
   max-width: 1280px;
   margin: 0 auto;
 }
-
 input {
   font-family: Abel, sans-serif;
   font-size: 28px;
+
+  
   border: 0px;
   background: transparent;
   height: 50px;
   color: black;
   width: 400px;
   border: 1px solid black;
-  padding: 8px;
+  padding:8px;
 }
-
 a {
   text-decoration: none !important;
   color: black;
   font-family: Abel, sans-serif;
 }
-
 h1 {
   font-size: 60px;
   text-align: center;
   margin: 0;
   margin-bottom: 40px;
 }
-
 form {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   height: 105px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: white;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
 }
-
 button, select {
+ 
   padding: 15px 30px !important;
   border-radius: 8px;
   font-size: 16px;
   background: #dedede;
 }
 
+
 .movie-ul {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(100px, 1fr))[5];
-      grid-template-columns: repeat(5, minmax(100px, 1fr));
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
   gap: 10px;
   position: relative;
   list-style: none;
   padding: 0;
 }
-
 .list {
   width: 200px;
   height: 350px;
   padding: 15px;
-  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  img {
+    transition: all 0.3s ease 0s;
+  }
 }
-
-.list img {
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
 .list:hover {
-  background: white;
+  background: rgb(255, 255, 255);
+  
+  // box-shadow:   0px 0px 0px 5px rgb(0 0 0 / 15%);
+  img {
+    filter: brightness(20%);
+  }
 }
 
-.list:hover img {
-  -webkit-filter: brightness(20%);
-          filter: brightness(20%);
-}
+
 
 h3 {
   font-family: Abel, sans-serif;
   line-height: 18px !important;
   margin: 0;
   font-size: 20px !important;
+
   text-align: center;
   margin-top: 10px !important;
 }
 
-.btn-danger {
+
+
+.btn-danger  {
   width: 180px !important;
   display: block !important;
 }
-
 .my-modal.show {
   display: block;
 }
 
+
+
+
 .my-modal {
   position: fixed;
   inset: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
+
   z-index: 100;
   background: rgba(24, 22, 22, 0.1);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   display: none;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba($color: #fff, $alpha: .7);
+
 }
 
 .my-modal__spinner {
@@ -146,18 +130,19 @@ h3 {
 }
 
 .my-modal.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
+
 
 .el-btn {
   display: none;
   position: absolute;
   left: 130px;
 }
-
 .pagination {
   margin-top: 50px;
 }
-/*# sourceMappingURL=main.css.map */
+
+
+
+

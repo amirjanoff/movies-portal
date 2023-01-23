@@ -6,17 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies portal</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+    </style>
   </head>
   <body>
-    <form data-movies-form>
-      <input type="text" name="name" />
-      <button type="submit">search</button>
-    </form>
-    <ul data-movies-list>
-      
-    </ul>
-    <script src="./js/main.js"></script>
-    <script src="./js/ombd.js"></script>
+    <div class="container">
+      <header>
+        <h1><a href="/">MOVIE PORTAL</a></h1>
+      </header>
+      <form data-movies-form>
+        <input type="text" placeholder="Search movie" name="name" />
+        <input
+          type="number"
+          name="year"
+          class="movie__input-year"
+          placeholder="Year!"
+          required
+        />
+        <select class="movie__select" name="type" required>
+          <option>Movie Type</option>
+          <option value="movie">Movie</option>
+          <option value="series">Series</option>
+          <option value="episode">Episode</option>
+        </select>
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+
+      <ul data-movies-list class="movie-ul"></ul>
+      <nav
+      aria-label="Movie pagination"
+      class="d-flex justify-content-center my-3"
+    >
+      <ul data-movie-pagination class="pagination"></ul>
+    </nav>
+      <div class="my-modal" id="test-modal" data-modal>
+        <div class="my-modal__content" data-model-content>
+          <button class="btn btn-close" data-modal-close></button>
+         
+          </div>
+          <div data-movie-about>
+            <h1 data-title></h1>
+            <h4 data-year></h4>
+            <h4 data-rated></h4>
+            <h4 data-released></h4>
+            <h4 data-runtime></h4>
+            <h4 data-genre></h4>
+            <h4 data-director></h4>
+            <h4 data-metascore></h4>
+            <h4 data-imdbrating></h4>
+            <h4 data-type></h4>
+            <h4 data-id></h4>
+          </div>
+        </div>
+      </div>
+    </div>
    
+    <script src="./js/ombd.js"></script>
   </body>
 </html>
